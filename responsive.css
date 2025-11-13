@@ -105,3 +105,29 @@ body {
     display: none !important;
   }
 }
+
+/* 🌙 Force landscape orientation notice 🌙 */
+@media only screen and (orientation: portrait) {
+  body::before {
+    content: "📱 Please rotate your phone to landscape to view this page properly ❤️";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #310E10;
+    color: #F4E3B2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    font-size: 1.3em;
+    z-index: 9999;
+  }
+
+  /* Hide your actual content while in portrait */
+  main, .text-section, .photo-stack, .polaroid-container, .text-side, header, footer {
+    display: none !important;
+  }
+}
