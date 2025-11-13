@@ -1,0 +1,107 @@
+/* 🌸 Global responsive design for all pages 🌸 */
+
+/* Smooth transition for resizing */
+body, .text-section, .polaroid-container, .photo-stack, .text-side {
+  transition: all 0.5s ease-in-out;
+}
+
+/* ===== Default (Desktop / Landscape) ===== */
+body {
+  flex-direction: row;
+}
+
+/* ===== Responsive Mode (Mobile / Portrait) ===== */
+@media (max-width: 900px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    overflow-x: hidden;
+  }
+
+  /* Universal text areas */
+  .text-section,
+  .photo-stack,
+  .polaroid-container,
+  .text-side {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Headings and text size adjustments */
+  .text-section h1,
+  .text-side h1 {
+    font-size: 2.3em;
+  }
+
+  .text-section h2,
+  .text-side h2 {
+    font-size: 1.6em;
+  }
+
+  .text-section p,
+  .text-side p {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin: 10px 0;
+  }
+
+  /* Polaroid or frame layout */
+  .polaroid-container,
+  .photo-stack {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .polaroid,
+  .frame {
+    width: 85%;
+    transform: none !important;
+    position: relative !important;
+    margin: 0 auto 25px;
+  }
+
+  .polaroid video,
+  .polaroid img,
+  .frame img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Buttons & navigation adjustments */
+  .text-section a.button,
+  .back-btn {
+    font-size: 1em;
+    padding: 8px 20px;
+    margin-top: 25px;
+    display: inline-block;
+  }
+
+  /* Header or title bars */
+  header {
+    font-size: 1.5em;
+    padding: 15px 10px;
+  }
+
+  /* Scroll text or bottom text adjustments */
+  .scrolling-text {
+    font-size: 0.9em;
+  }
+
+  /* Infinity symbols or special icons */
+  .infinity {
+    transform: scale(4);
+    right: -25px;
+  }
+
+  /* For special floating effects (optional) */
+  canvas, .flake, .petal {
+    display: none !important;
+  }
+}
